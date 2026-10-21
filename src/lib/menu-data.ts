@@ -163,8 +163,8 @@ export const menuItems: MenuItem[] = [
     image: boodleFight,
     paxOptions: [
       { label: "Mega Boodle (4-5 pax)", price: 1200 },
-      { label: "Buy 2 Promo (with Free Spaghetti)", price: 1699 },
-      { label: "Buy 3 Promo (with Free Whole Chicken)", price: 2200 },
+      { label: "Barkada Boodle (8-10 pax)", price: 1699 },
+      { label: "Party Boodle (12-15 pax)", price: 2200 },
     ],
   },
   {
