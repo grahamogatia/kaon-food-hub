@@ -21,7 +21,7 @@ import {
 import { Check, Plus, Users, UtensilsCrossed } from "lucide-react";
 
 const typeEmoji: Record<string, string> = {
-  "ulam-bundles": "🍱",
+  "promos": "🍱",
   boodle: "🥘",
   "ala-carte": "🍽️",
 };
@@ -283,7 +283,7 @@ function MenuCard({ item, onSelect, onAdd }: { item: MenuItem; onSelect: (item: 
         <img
           src={item.image}
           alt={item.name}
-          className="aspect-[1.91/1] w-full object-cover"
+          className="aspect-[1080/835] w-full object-cover"
         />
       ) : (
         <div className="flex aspect-[1.91/1] w-full items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-50">

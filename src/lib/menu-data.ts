@@ -1,12 +1,15 @@
-import ulam2 from "@/assets/menu/ulam-bundles/ulam2bundle.jpg";
-import ulam3 from "@/assets/menu/ulam-bundles/ulam3bundle.jpg";
-import ulam4 from "@/assets/menu/ulam-bundles/ulam4bundle.jpg";
-import ulam5 from "@/assets/menu/ulam-bundles/ulam5bundle.jpg";
-import ulam5belly from "@/assets/menu/ulam-bundles/ulam5bundlewbelly.jpg";
-import ulam6 from "@/assets/menu/ulam-bundles/ulam6bundle.jpg";
-import ulam7 from "@/assets/menu/ulam-bundles/ulam7bundle.jpg";
-import ulam8 from "@/assets/menu/ulam-bundles/ulam8bundle.jpg";
-import ulam10 from "@/assets/menu/ulam-bundles/ulam10bundle.jpg";
+import crispy_pata from "@/assets/menu/promos/crispy_pata.jpg";
+import pork_belly from "@/assets/menu/promos/pork_belly.jpg";
+import pasta from "@/assets/menu/promos/pasta.jpg";
+import salo1 from "@/assets/menu/promos/salo1.jpg";
+import salo2 from "@/assets/menu/promos/salo2.jpg";
+import salo3 from "@/assets/menu/promos/salo3.jpg";
+import salo4 from "@/assets/menu/promos/salo4.jpg";
+import salo5 from "@/assets/menu/promos/salo5.jpg";
+import salo6 from "@/assets/menu/promos/salo6.jpg";
+import salo7 from "@/assets/menu/promos/salo7.jpg";
+import salo8 from "@/assets/menu/promos/salo8.jpg";
+import salo9 from "@/assets/menu/promos/salo9.jpg";
 import boodleMega from "@/assets/menu/boodle/boodlebilaomega.jpg";
 import boodleBarkada from "@/assets/menu/boodle/boodlebilaobarkada.jpg";
 import boodleParty from "@/assets/menu/boodle/boodlebilaoparty.jpg";
@@ -30,7 +33,7 @@ import acPorkBellyBuy2 from "@/assets/menu/ala-carte/porkbellybuy2promo.jpg";
 import acPorkBellyBuy3 from "@/assets/menu/ala-carte/porkbellybuy3promo.jpg";
 import acShrimpTempura from "@/assets/menu/ala-carte/shrimptempura.jpg";
 
-export type MenuType = "ulam-bundles" | "boodle" | "ala-carte";
+export type MenuType = "promos" | "boodle" | "ala-carte";
 
 export interface PaxOption {
   label: string;
@@ -54,89 +57,119 @@ export interface MenuItem {
 // ────────────────────────────────────────────
 
 export const menuItems: MenuItem[] = [
-  // ── Ulam Bundles ──────────────────────────
+  // ── Promos ──────────────────────────
   {
-    id: "2-ulam-bundle",
-    type: "ulam-bundles",
-    name: "2 Ulam Bundle",
-    items: ["Crispy Pata (800g–1kg)", "Pansit 12\""],
+    id: "crispy-pata-promo",
+    type: "promos",
+    name: "Crispy Pata Promo",
+    items: ["Crispy Pata (800g–1kg)"],
+    price: 699,
+    pax: "3-4 pax per pc",
+    image: crispy_pata,
+    paxOptions: [
+      { label: "Crispy Pata (1 pc)", price: 699 },
+      { label: "Buy 2 Promo", price: 899 },
+      { label: "Buy 3 Promo", price: 1350 },
+    ],
+  },
+  {
+    id: "pork-belly-promo",
+    type: "promos",
+    name: "Pork Belly Promo",
+    items: ["Pork Belly (800g–1kg)"],
+    price: 899,
+    pax: "3-4 pax per pc",
+    image: pork_belly,
+    paxOptions: [
+      { label: "Pork Belly (1 pc)", price: 899 },
+      { label: "Buy 2 Promo (with Free Spaghetti)", price: 1699 },
+      { label: "Buy 3 Promo (with Free Whole Chicken)", price: 2599 },
+    ],
+  },
+  {
+    id: "salo-salo1-promo",
+    type: "promos",
+    name: "Salo-Salo 1",
+    items: ["Crispy Pata (800g to 1kg)", "Spaghetti"],
     price: 999,
-    pax: "4–6",
-    image: ulam2,
+    pax: "4-6 pax",
+    image: salo1,
   },
   {
-    id: "3-ulam-bundle",
-    type: "ulam-bundles",
-    name: "3 Ulam Bundle",
-    items: ["Pork Shanghai (15 pcs)", "Crispy Pata (800g–1kg)", "Pansit 12\""],
+    id: "salo-salo2-promo",
+    type: "promos",
+    name: "Salo-Salo 2",
+    items: ["Crispy Pata (800g to 1kg)", "Spaghetti", "Pork Shanghai (15 pcs)"],
     price: 1150,
-    pax: "8–10",
-    image: ulam3,
+    pax: "8-10 pax",
+    image: salo2,
   },
   {
-    id: "4-ulam-bundle",
-    type: "ulam-bundles",
-    name: "4 Ulam Bundle",
-    items: ["Pork Shanghai (15 pcs)", "Crispy Pata (800g–1kg)", "Pansit 12\"", "Fried Chicken (8 pcs)"],
+    id: "salo-salo3-promo",
+    type: "promos",
+    name: "Salo-Salo 3",
+    items: ["Crispy Pata (800g to 1kg)", "Spaghetti", "Pork Shanghai (15 pcs)", "Fried Chicken (8pcs)"],
     price: 1550,
-    pax: "10–12",
-    image: ulam4,
+    pax: "10-12 pax",
+    image: salo3,
   },
   {
-    id: "5-ulam-bundle",
-    type: "ulam-bundles",
-    name: "5 Ulam Bundle",
-    items: ["Pork Shanghai (15 pcs)", "Crispy Pata (800g–1kg)", "Pansit 12\"", "Jumbo Siomai (10 pcs)", "Whole Chicken (800g–1kg)"],
-    price: 1650,
-    pax: "12–15",
-    image: ulam5,
-  },
-  {
-    id: "5-ulam-bundle-belly",
-    type: "ulam-bundles",
-    name: "5 Ulam w/ Belly",
-    items: ["Crispy Pata (800g–1kg)", "Pork Belly (800g–1kg)", "Whole Chicken (800g–1kg)", "Cheesy Bangus (3 pcs)", "Pork Shanghai (30 pcs)"],
+    id: "salo-salo4-promo",
+    type: "promos",
+    name: "Salo-Salo 4",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (30 pcs)", "Pork Belly (800g to 1kg)", "Whole Chicken (800g to 1kg)", "Cheesy Bangus (3pcs)"],
     price: 1998,
-    pax: "12–15",
-    image: ulam5belly,
+    pax: "12-15 pax",
+    image: salo4,
   },
   {
-    id: "6-ulam-bundle",
-    type: "ulam-bundles",
-    name: "6 Ulam Bundle",
-    items: ["Pork Shanghai (25 pcs)", "Crispy Pata (800g–1kg)", "Jumbo Siomai (25 pcs)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g–1kg)"],
+    id: "salo-salo5-promo",
+    type: "promos",
+    name: "Salo-Salo 5",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (15 pcs)", "Jumbo Siomai (10 pcs)", "Spaghetti (12\")", "Whole Chicken (800g to 1kg)"],
+    price: 1650,
+    pax: "12-15 pax",
+    image: salo5,
+  },
+  {
+    id: "salo-salo6-promo",
+    type: "promos",
+    name: "Salo-Salo 6",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)"],
     price: 2050,
-    pax: "15–18",
-    image: ulam6,
+    pax: "15-18 pax",
+    image: salo6,
   },
   {
-    id: "7-ulam-bundle",
-    type: "ulam-bundles",
-    name: "7 Ulam Bundle",
-    items: ["Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Pansit 12\"", "Crispy Pata (800g–1kg)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g–1kg)"],
+    id: "salo-salo7-promo",
+    type: "promos",
+    name: "Salo-Salo 7",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)"],
     price: 2350,
-    pax: "18–20",
-    image: ulam7,
+    pax: "18-20 pax",
+    image: salo7,
   },
   {
-    id: "8-ulam-bundle",
-    type: "ulam-bundles",
-    name: "8 Ulam Bundle",
-    items: ["Shrimp Tempura (15 pcs)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Pansit 12\"", "Crispy Pata (800g–1kg)", "Whole Chicken (800g–1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)"],
+    id: "salo-salo8-promo",
+    type: "promos",
+    name: "Salo-Salo 8",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)", "Shrimp Tempura (15 pcs)"],
     price: 2550,
-    pax: "20–25",
-    image: ulam8,
-    badge: "Best Seller",
+    pax: "20-25 pax",
+    image: salo8,
   },
   {
-    id: "10-ulam-bundle",
-    type: "ulam-bundles",
-    name: "10 Ulam Bundle",
-    items: ["Shrimp Tempura (15 pcs)", "Pork BBQ (12 pcs)", "Spaghetti 12\"", "Pansit 12\"", "Double Crispy Pata (800g–1kg)", "Whole Chicken (800g–1kg)", "Pork Shanghai (20 pcs)", "Classic Bangus (3 pcs)", "Jumbo Siomai (20 pcs)"],
+    id: "salo-salo9-promo",
+    type: "promos",
+    name: "Salo-Salo 9",
+    items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (20 pcs)", "Jumbo Siomai (20 pcs)", "Carbonara (5 to 7 pax)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)", "Shrimp Tempura (15 pcs)"],
     price: 3050,
-    pax: "25–30",
-    image: ulam10,
+    pax: "25-30 pax",
+    image: salo9,
   },
+
+  
+  
 
   // ── Boodle ────────────────────────────────
   {
@@ -387,7 +420,7 @@ export const menuItems: MenuItem[] = [
 
 export const menuTypes = [
   { value: "all", label: "All Items" },
-  { value: "ulam-bundles", label: "Ulam Bundles" },
+  { value: "promos", label: "Promos" },
   { value: "boodle", label: "Boodle" },
   { value: "ala-carte", label: "Ala Carte" },
 ] as const;
