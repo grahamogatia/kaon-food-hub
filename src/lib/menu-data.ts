@@ -184,20 +184,6 @@ export const menuItems: MenuItem[] = [
 
   // ── Ala Carte ─────────────────────────────
   {
-    id: "ac-pansit",
-    type: "ala-carte",
-    name: "Pansit",
-    items: ["Classic Filipino noodle dish"],
-    price: 599,
-    pax: "5–25",
-    paxOptions: [
-      { label: "5–7 pax", price: 599 },
-      { label: "8–12 pax", price: 800 },
-      { label: "16–20 pax", price: 1500 },
-      { label: "21–25 pax", price: 1700 },
-    ],
-  },
-  {
     id: "ac-palabok",
     type: "ala-carte",
     name: "Palabok",
