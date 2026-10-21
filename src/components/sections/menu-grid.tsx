@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   AlertDialog,
@@ -36,9 +37,13 @@ export function MenuGrid() {
   const [selectedPax, setSelectedPax] = useState<PaxOption | null>(null);
   const { addItem } = useCart();
 
+  // Separate items so "All Items" renders Promos & Boodle first, then a separator + Ala Carte section
+  const nonAlaCarteItems = menuItems.filter((item) => item.type !== "ala-carte");
+  const alaCarteItems = menuItems.filter((item) => item.type === "ala-carte");
+
   const filtered =
     activeType === "all"
-      ? menuItems
+      ? nonAlaCarteItems
       : menuItems.filter((item) => item.type === activeType);
 
   const handleAddFromDialog = () => {
@@ -107,32 +112,47 @@ export function MenuGrid() {
           </TabsList>
         </Tabs>
 
-        {/* Ala Carte Top Banners */}
-        {activeType === "ala-carte" && (
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
-              <img
-                src={pastaBanner}
-                alt="Pasta Menu"
-                className="aspect-[1080/835] w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
-              <img
-                src={alaCarteBanner}
-                alt="Ala Carte Menu"
-                className="aspect-[1080/835] w-full object-cover"
-              />
-            </div>
-          </div>
-        )}
+        {/* Ala Carte Top Banners (when Ala Carte tab is selected directly) */}
+        {activeType === "ala-carte" && <AlaCarteBanners />}
 
-        {/* Grid */}
+        {/* Main Grid */}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((item) => (
             <MenuCard key={item.id} item={item} onSelect={setSelectedItem} onAdd={handleCardAdd} />
           ))}
         </div>
+
+        {/* Separated Ala Carte Section (ONLY shown in "All Items" tab) */}
+        {activeType === "all" && alaCarteItems.length > 0 && (
+          <div className="mt-16">
+            <Separator className="mb-14" />
+
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-widest text-fiesta-orange">
+                Pasta &amp; Single Orders
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+                Ala Carte
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Check the reference boards below and select your items to add to cart.
+              </p>
+            </div>
+
+            <AlaCarteBanners />
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {alaCarteItems.map((item) => (
+                <MenuCard
+                  key={item.id}
+                  item={item}
+                  onSelect={setSelectedItem}
+                  onAdd={handleCardAdd}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Item detail dialog */}
@@ -275,6 +295,27 @@ export function MenuGrid() {
         </AlertDialogContent>
       </AlertDialog>
     </section>
+  );
+}
+
+function AlaCarteBanners() {
+  return (
+    <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
+        <img
+          src={pastaBanner}
+          alt="Pasta Menu"
+          className="aspect-[1080/835] w-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
+        <img
+          src={alaCarteBanner}
+          alt="Ala Carte Menu"
+          className="aspect-[1080/835] w-full object-cover"
+        />
+      </div>
+    </div>
   );
 }
 
