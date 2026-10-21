@@ -8,8 +8,13 @@ export function AboutStory() {
     <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Top banner placeholder */}
-        <div className="relative mb-16 flex h-64 items-center justify-center overflow-hidden rounded-2xl bg-neutral-950 sm:h-80">
-          <img src={fiestaSrc} alt="Fiesta banners" className="absolute inset-0 h-full w-full object-cover opacity-80" />
+        <div className="relative mx-auto mb-16 aspect-square w-full max-w-[312px] overflow-hidden bg-neutral-950">
+          <img
+            src={fiestaSrc}
+            alt="Fiesta banners"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
           <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-fiesta-red via-fiesta-yellow to-fiesta-green" />
         </div>
 
