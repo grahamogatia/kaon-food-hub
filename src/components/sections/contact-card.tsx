@@ -29,24 +29,18 @@ export function ContactCard() {
             Contact Information
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Visit us at any of our branches or reach out through the channels below.
+            Reach out through the channels below.
           </p>
         </div>
 
         {/* Tabs for branches */}
         <div className="mx-auto mt-14 max-w-4xl">
-          <Tabs defaultValue="pasig" className="w-full">
-            <TabsList className="mb-6 flex w-full justify-center gap-2">
-              <TabsTrigger value="pasig">Pasig</TabsTrigger>
-            </TabsList>
-
-            {/* Pasig Tab */}
-            <TabsContent value="pasig">
+          
               <div className="grid gap-6 sm:grid-cols-2">
                 {/* Main contact */}
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Pasig Contact Details</CardTitle>
+                    <CardTitle className="text-base">Contact Details</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-5">
                     <ContactRow
@@ -64,11 +58,11 @@ export function ContactCard() {
                       label="Operating Hours"
                       value={
                         <span>
-                          <span className="block">Tuesday to Sunday: 10:00 AM – 7:00 PM</span>
+                          <span className="block">Tuesday to Sunday: 9:00 AM – 6:00 PM</span>
                           <span className="block">Monday: Closed</span>
                           <span className="block mt-2 text-xs text-muted-foreground">
                             🔸 Mondays are open for advance orders only.<br />
-                            🔸 Last orders are accepted until 6:45 PM daily.
+                            🔸 Last orders are accepted until 5:45 PM daily.
                           </span>
                         </span>
                       }
@@ -90,14 +84,12 @@ export function ContactCard() {
                     <ContactRow
                       icon={<MapPin className="size-4" />}
                       label="Address"
-                      value={"Block 8 Lot E Joksonville Townhouse M.H. Del Pilar St., Brgy. Palatiw (Kanan), Pasig, NCR 1600, Philippines"}
+                      value={"Block 8 Lot E Joksonville Townhomes, M. H. Del Pilar St., Brgy. Palatiw (Kanan), Pasig, NCR 1600, Philippines"}
                     />
                     <Separator />
                   </CardContent>
                 </Card>
               </div>
-            </TabsContent>
-          </Tabs>
         </div>
       </div>
     </section>
