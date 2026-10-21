@@ -52,12 +52,12 @@ export function ContactCard() {
                     <ContactRow
                       icon={<Phone className="size-4" />}
                       label="Phone"
-                      value="0995-490-7805"
+                      value="0947-364-3770"
                     />
                     <ContactRow
                       icon={<Mail className="size-4" />}
                       label="Email"
-                      value="bgdjr68@yahoo.com"
+                      value="bgdaza68@yahoo.com"
                     />
                     <ContactRow
                       icon={<Clock className="size-4" />}
@@ -90,7 +90,7 @@ export function ContactCard() {
                     <ContactRow
                       icon={<MapPin className="size-4" />}
                       label="Address"
-                      value={"Joksonville Townhouse M.H. Del Pilar St., Brgy. Palatiw, Pasig City"}
+                      value={"Block 8 Lot E Joksonville Townhouse M.H. Del Pilar St., Brgy. Palatiw (Kanan), Pasig, NCR 1600, Philippines"}
                     />
                     <Separator />
                   </CardContent>

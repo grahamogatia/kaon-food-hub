@@ -77,6 +77,7 @@ export const menuItems: MenuItem[] = [
     price: 999,
     pax: "4-6 pax",
     image: salo1,
+    badge: "Best Seller"
   },
   {
     id: "salo-salo2-promo",
@@ -149,6 +150,7 @@ export const menuItems: MenuItem[] = [
     price: 3050,
     pax: "25-30 pax",
     image: salo9,
+    badge: "Best Seller"
   },
 
 

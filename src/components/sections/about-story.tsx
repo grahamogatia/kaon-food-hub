@@ -11,9 +11,6 @@ export function AboutStory() {
         <div className="relative mb-16 flex h-64 items-center justify-center overflow-hidden rounded-2xl bg-neutral-950 sm:h-80">
           <img src={fiestaSrc} alt="Fiesta banners" className="absolute inset-0 h-full w-full object-cover opacity-80" />
           <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-fiesta-red via-fiesta-yellow to-fiesta-green" />
-          <div className="relative text-center">
-            <img src={logoSrc} alt="" className="mx-auto h-20 w-20 object-contain sm:h-24 sm:w-24" />
-          </div>
         </div>
 
         {/* Mission */}
