@@ -45,7 +45,7 @@ export const menuItems: MenuItem[] = [
     name: "Crispy Pata Promo",
     items: ["Crispy Pata (800g–1kg)"],
     price: 699,
-    pax: "3-4 pax per pc",
+    pax: "3-4",
     image: crispy_pata,
     paxOptions: [
       { label: "Crispy Pata (1 pc)", price: 699 },
@@ -60,7 +60,7 @@ export const menuItems: MenuItem[] = [
     name: "Pork Belly Promo",
     items: ["Pork Belly (800g–1kg)"],
     price: 899,
-    pax: "3-4 pax per pc",
+    pax: "3-4",
     image: pork_belly,
     paxOptions: [
       { label: "Pork Belly (1 pc)", price: 899 },
@@ -75,7 +75,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 1",
     items: ["Crispy Pata (800g to 1kg)", "Spaghetti"],
     price: 999,
-    pax: "4-6 pax",
+    pax: "4-6",
     image: salo1,
     badge: "Best Seller"
   },
@@ -85,7 +85,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 2",
     items: ["Crispy Pata (800g to 1kg)", "Spaghetti", "Pork Shanghai (15 pcs)"],
     price: 1150,
-    pax: "8-10 pax",
+    pax: "8-10",
     image: salo2,
   },
   {
@@ -94,7 +94,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 3",
     items: ["Crispy Pata (800g to 1kg)", "Spaghetti", "Pork Shanghai (15 pcs)", "Fried Chicken (8pcs)"],
     price: 1550,
-    pax: "10-12 pax",
+    pax: "10-12",
     image: salo3,
   },
   {
@@ -103,7 +103,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 4",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (30 pcs)", "Pork Belly (800g to 1kg)", "Whole Chicken (800g to 1kg)", "Cheesy Bangus (3pcs)"],
     price: 1998,
-    pax: "12-15 pax",
+    pax: "12-15",
     image: salo4,
   },
   {
@@ -112,7 +112,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 5",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (15 pcs)", "Jumbo Siomai (10 pcs)", "Spaghetti (12\")", "Whole Chicken (800g to 1kg)"],
     price: 1650,
-    pax: "12-15 pax",
+    pax: "12-15",
     image: salo5,
   },
   {
@@ -121,7 +121,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 6",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)"],
     price: 2050,
-    pax: "15-18 pax",
+    pax: "15-18",
     image: salo6,
   },
   {
@@ -130,7 +130,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 7",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)"],
     price: 2350,
-    pax: "18-20 pax",
+    pax: "18-20",
     image: salo7,
   },
   {
@@ -139,7 +139,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 8",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (25 pcs)", "Jumbo Siomai (25 pcs)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)", "Shrimp Tempura (15 pcs)"],
     price: 2550,
-    pax: "20-25 pax",
+    pax: "20-25",
     image: salo8,
   },
   {
@@ -148,7 +148,7 @@ export const menuItems: MenuItem[] = [
     name: "Salo-Salo 9",
     items: ["Crispy Pata (800g to 1kg)", "Pork Shanghai (20 pcs)", "Jumbo Siomai (20 pcs)", "Carbonara (5 to 7 pax)", "Spaghetti (5 to 7 pax)", "Pork BBQ (12 pcs)", "Classic Bangus (3 pcs)", "Whole Chicken (800g to 1kg)", "Shrimp Tempura (15 pcs)"],
     price: 3050,
-    pax: "25-30 pax",
+    pax: "25-30",
     image: salo9,
     badge: "Best Seller"
   },
@@ -161,7 +161,7 @@ export const menuItems: MenuItem[] = [
     name: "Boodle Fight",
     items: ["Mega Boodle (4-5 pax)", "Barkada Boodle (8-10 pax)", "Party Boodle (12-15 pax)"],
     price: 1200,
-    pax: "from 4-5 pax",
+    pax: "from 4-5",
     image: boodleFight,
     paxOptions: [
       { label: "Mega Boodle (4-5 pax)", price: 1200 },
@@ -175,7 +175,7 @@ export const menuItems: MenuItem[] = [
     name: "Boodle Tray",
     items: ["Celebrity Boodle Tray (10-12 pax)", "3 Footer Boodle Tray (12-15 pax)", "Mega Boodle Tray (15-20 pax)"],
     price: 2400,
-    pax: "from 10-12 pax",
+    pax: "from 10-12",
     image: boodleTray,
     paxOptions: [
       { label: "Celebrity Boodle Tray (10-12 pax)", price: 2400 },
