@@ -20,6 +20,9 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Check, Plus, Users, UtensilsCrossed } from "lucide-react";
 
+import pastaBanner from "@/assets/menu/ala-carte/pasta.jpg";
+import alaCarteBanner from "@/assets/menu/ala-carte/ala_carte.jpg";
+
 const typeEmoji: Record<string, string> = {
   "promos": "🍱",
   boodle: "🥘",
@@ -104,6 +107,26 @@ export function MenuGrid() {
           </TabsList>
         </Tabs>
 
+        {/* Ala Carte Top Banners */}
+        {activeType === "ala-carte" && (
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
+              <img
+                src={pastaBanner}
+                alt="Pasta Menu"
+                className="aspect-[1080/835] w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl border border-border/60 shadow-sm">
+              <img
+                src={alaCarteBanner}
+                alt="Ala Carte Menu"
+                className="aspect-[1080/835] w-full object-cover"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Grid */}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((item) => (
@@ -125,17 +148,21 @@ export function MenuGrid() {
           </AlertDialogHeader>
 
           <Card className="border-0 ring-0 shadow-none p-0">
-            {/* Image */}
-            {selectedItem?.image ? (
-              <img
-                src={selectedItem.image}
-                alt={selectedItem.name}
-                className="w-full rounded-md object-cover aspect-[1080/835]"
-              />
-            ) : (
-              <div className="flex w-full items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 aspect-[1.91/1]">
-                <span className="text-5xl">{emoji}</span>
-              </div>
+            {/* Image (Hidden for ala-carte items) */}
+            {selectedItem?.type !== "ala-carte" && (
+              <>
+                {selectedItem?.image ? (
+                  <img
+                    src={selectedItem.image}
+                    alt={selectedItem.name}
+                    className="w-full rounded-md object-cover aspect-[1080/835]"
+                  />
+                ) : (
+                  <div className="flex w-full items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 aspect-[1080/835]">
+                    <span className="text-5xl">{emoji}</span>
+                  </div>
+                )}
+              </>
             )}
 
             {/* Fiesta ribbon */}
@@ -254,6 +281,7 @@ export function MenuGrid() {
 function MenuCard({ item, onSelect, onAdd }: { item: MenuItem; onSelect: (item: MenuItem) => void; onAdd: (item: MenuItem) => void }) {
   const [justAdded, setJustAdded] = useState(false);
   const emoji = typeEmoji[item.type] ?? "🍽️";
+  const isAlaCarte = item.type === "ala-carte";
 
   useEffect(() => {
     if (!justAdded) return;
@@ -278,17 +306,21 @@ function MenuCard({ item, onSelect, onAdd }: { item: MenuItem; onSelect: (item: 
       onClick={() => onSelect(item)}
       className="group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-xl border-border/60 transition-all duration-300 hover:shadow-lg hover:border-fiesta-yellow/40"
     >
-      {/* Image */}
-      {item.image ? (
-        <img
-          src={item.image}
-          alt={item.name}
-          className="aspect-[1080/835] w-full object-cover"
-        />
-      ) : (
-        <div className="flex aspect-[1.91/1] w-full items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-50">
-          <span className="text-5xl">{emoji}</span>
-        </div>
+      {/* Image (Hidden for ala-carte items) */}
+      {!isAlaCarte && (
+        <>
+          {item.image ? (
+            <img
+              src={item.image}
+              alt={item.name}
+              className="aspect-[1080/835] w-full object-cover"
+            />
+          ) : (
+            <div className="flex aspect-[1080/835] w-full items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-50">
+              <span className="text-5xl">{emoji}</span>
+            </div>
+          )}
+        </>
       )}
 
       {/* Fiesta gradient ribbon */}

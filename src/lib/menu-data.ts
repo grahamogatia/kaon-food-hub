@@ -12,22 +12,7 @@ import salo9 from "@/assets/menu/promos/salo9.jpg";
 import boodleFight from "@/assets/menu/boodle/boodle_fight.jpg";
 import boodleTray from "@/assets/menu/boodle/boodle_tray.jpg";
 
-import acPansit from "@/assets/menu/ala-carte/pansit.jpg";
-import acPalabok from "@/assets/menu/ala-carte/palabok.jpg";
-import acCarbonara from "@/assets/menu/ala-carte/carbonara.jpg";
-import acSpaghetti from "@/assets/menu/ala-carte/spaghetti.jpg";
-import acJumboSiomai from "@/assets/menu/ala-carte/jumbosiomai.jpg";
-import acPorkShanghai from "@/assets/menu/ala-carte/porkshanghai.jpg";
-import acPorkBBQ from "@/assets/menu/ala-carte/porkbbq.jpg";
-import acFriedChicken from "@/assets/menu/ala-carte/friedchicken.jpg";
-import acWholeChicken from "@/assets/menu/ala-carte/wholefriedchicken.jpg";
-import acBangus from "@/assets/menu/ala-carte/bangus.jpg";
-import acCheesyBangus from "@/assets/menu/ala-carte/cheesybangus.jpg";
-import acCrispyPata from "@/assets/menu/ala-carte/crispypata.jpg";
-import acPorkBelly from "@/assets/menu/ala-carte/porkbelly.jpg";
-import acPorkBellyBuy2 from "@/assets/menu/ala-carte/porkbellybuy2promo.jpg";
-import acPorkBellyBuy3 from "@/assets/menu/ala-carte/porkbellybuy3promo.jpg";
-import acShrimpTempura from "@/assets/menu/ala-carte/shrimptempura.jpg";
+
 
 export type MenuType = "promos" | "boodle" | "ala-carte";
 
@@ -205,7 +190,6 @@ export const menuItems: MenuItem[] = [
     items: ["Classic Filipino noodle dish"],
     price: 599,
     pax: "5–25",
-    image: acPansit,
     paxOptions: [
       { label: "5–7 pax", price: 599 },
       { label: "8–12 pax", price: 800 },
@@ -220,7 +204,6 @@ export const menuItems: MenuItem[] = [
     items: ["Rice noodles with savory shrimp sauce"],
     price: 599,
     pax: "5–25",
-    image: acPalabok,
     paxOptions: [
       { label: "5–7 pax", price: 599 },
       { label: "8–12 pax", price: 800 },
@@ -235,7 +218,6 @@ export const menuItems: MenuItem[] = [
     items: ["Creamy Filipino-style carbonara"],
     price: 599,
     pax: "5–25",
-    image: acCarbonara,
     paxOptions: [
       { label: "5–7 pax", price: 599 },
       { label: "8–12 pax", price: 800 },
@@ -250,7 +232,6 @@ export const menuItems: MenuItem[] = [
     items: ["Sweet-style Filipino spaghetti"],
     price: 599,
     pax: "5–25",
-    image: acSpaghetti,
     paxOptions: [
       { label: "5–7 pax", price: 599 },
       { label: "8–12 pax", price: 800 },
@@ -265,7 +246,6 @@ export const menuItems: MenuItem[] = [
     items: ["Steamed pork dumplings"],
     price: 390,
     pax: "30–50 pcs",
-    image: acJumboSiomai,
     paxOptions: [
       { label: "30 pcs", price: 390 },
       { label: "50 pcs", price: 650 },
@@ -278,7 +258,6 @@ export const menuItems: MenuItem[] = [
     items: ["Crispy fried spring rolls"],
     price: 350,
     pax: "30–50 pcs",
-    image: acPorkShanghai,
     paxOptions: [
       { label: "30 pcs", price: 350 },
       { label: "50 pcs", price: 600 },
@@ -291,7 +270,6 @@ export const menuItems: MenuItem[] = [
     items: ["Sweet & savory grilled pork skewers"],
     price: 900,
     pax: "30–50 pcs",
-    image: acPorkBBQ,
     paxOptions: [
       { label: "30 pcs", price: 900 },
       { label: "50 pcs", price: 1450 },
@@ -304,7 +282,6 @@ export const menuItems: MenuItem[] = [
     items: ["25 pieces of golden fried chicken"],
     price: 799,
     pax: "25 pcs",
-    image: acFriedChicken,
   },
   {
     id: "ac-whole-fried-chicken",
@@ -313,7 +290,6 @@ export const menuItems: MenuItem[] = [
     items: ["Whole fried chicken (800g–1kg)"],
     price: 350,
     pax: "1 pc",
-    image: acWholeChicken,
   },
   {
     id: "ac-classic-bangus",
@@ -322,7 +298,6 @@ export const menuItems: MenuItem[] = [
     items: ["Boneless milkfish, fried to perfection"],
     price: 180,
     pax: "1 pc",
-    image: acBangus,
   },
   {
     id: "ac-cheesy-bangus",
@@ -331,50 +306,6 @@ export const menuItems: MenuItem[] = [
     items: ["Boneless milkfish with melted cheese"],
     price: 200,
     pax: "1 pc",
-    image: acCheesyBangus,
-  },
-  {
-    id: "ac-crispy-pata",
-    type: "ala-carte",
-    name: "Crispy Pata",
-    items: ["Deep-fried pork knuckle"],
-    price: 699,
-    pax: "1–3 pcs",
-    image: acCrispyPata,
-    paxOptions: [
-      { label: "1 pc", price: 699 },
-      { label: "Buy 2 Promo", price: 899 },
-      { label: "Buy 3 Promo", price: 1350 },
-    ],
-  },
-  {
-    id: "ac-pork-belly",
-    type: "ala-carte",
-    name: "Pork Belly",
-    items: ["Crispy pork belly (800g–1kg)"],
-    price: 899,
-    pax: "1 pc",
-    image: acPorkBelly,
-  },
-  {
-    id: "ac-pork-belly-buy2",
-    type: "ala-carte",
-    name: "Pork Belly Buy 2 Promo",
-    items: ["2x Pork Belly (800g–1kg)", "Free Pansit"],
-    price: 1699,
-    pax: "2 pcs",
-    image: acPorkBellyBuy2,
-    badge: "Promo",
-  },
-  {
-    id: "ac-pork-belly-buy3",
-    type: "ala-carte",
-    name: "Pork Belly Buy 3 Promo",
-    items: ["3x Pork Belly (800g–1kg)", "Free Whole Fried Chicken"],
-    price: 2599,
-    pax: "3 pcs",
-    image: acPorkBellyBuy3,
-    badge: "Promo",
   },
   {
     id: "ac-shrimp-tempura",
@@ -383,7 +314,6 @@ export const menuItems: MenuItem[] = [
     items: ["30 pieces of crispy shrimp tempura"],
     price: 799,
     pax: "30 pcs",
-    image: acShrimpTempura,
   },
 ];
 
