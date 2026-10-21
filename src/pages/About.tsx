@@ -6,7 +6,7 @@ export default function AboutPage() {
     <>
       <SEO
         title="About Us"
-        description="Learn about Pista Central Express — our story, mission, and passion for authentic Filipino cuisine served fresh and fast."
+        description="Learn about Kaon Food Hub — our story, mission, and passion for authentic Filipino cuisine served fresh and fast."
         path="/about"
       />
       <AboutStory />

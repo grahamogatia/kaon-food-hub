@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Kaon Food Hub",
   tagline: "Every Meal, A Fiesta!",
   description:
-    "From beloved Filipino classics to bold new flavors, every dish at Pista Central Express is a celebration of heritage — served fresh, fast, and with fiesta spirit.",
+    "From beloved Filipino classics to bold new flavors, every dish at Kaon Food Hub is a celebration of heritage — served fresh, fast, and with fiesta spirit.",
   branches: ["Rizal", "Caloocan", "Pasig"] as const,
   social: {
     facebook: "https://facebook.com/pistacentralexpress",

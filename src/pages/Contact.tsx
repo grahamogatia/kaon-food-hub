@@ -6,7 +6,7 @@ export default function ContactPage() {
     <>
       <SEO
         title="Contact"
-        description="Get in touch with Pista Central Express. Visit our branches in Rizal, Caloocan, and Pasig or reach out online."
+        description="Get in touch with Kaon Food Hub. Visit our branches in Rizal, Caloocan, and Pasig or reach out online."
         path="/contact"
       />
       <ContactCard />
