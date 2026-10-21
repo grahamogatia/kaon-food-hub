@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18387588326"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-18387588326");
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E53E3E" />
+    <meta
+      name="description"
+      content="From beloved Filipino classics to bold new flavors, every dish at Pista Central Express is a celebration of heritage — served fresh, fast, and with fiesta spirit."
+    />
+
+    <!-- Open Graph defaults (overridden per page by react-helmet-async) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pista Central Express" />
+    <meta property="og:locale" content="en_PH" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Pista Central Express",
+        "description": "From beloved Filipino classics to bold new flavors, every dish at Pista Central Express is a celebration of heritage — served fresh, fast, and with fiesta spirit.",
+        "servesCuisine": "Filipino",
+        "url": "https://pistacentralexpress.vercel.app",
+        "priceRange": "₱₱",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PH",
+          "addressRegion": "Metro Manila"
+        }
+      }
+    </script>
+
+    <title>Pista Central Express — Your Filipino Fiesta, Served Fast</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

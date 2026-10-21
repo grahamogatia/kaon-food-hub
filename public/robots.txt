@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pistacentralexpress.vercel.app/sitemap.xml
