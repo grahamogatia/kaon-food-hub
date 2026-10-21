@@ -1,5 +1,4 @@
 import { siteConfig } from "@/lib/site";
-import logoSrc from "@/assets/logo.png";
 import fiestaSrc from "@/assets/about/fiesta.jpg";
 import pistaBg from "@/assets/pistafoodbg.png";
 

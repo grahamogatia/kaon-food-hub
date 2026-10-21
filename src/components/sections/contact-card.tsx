@@ -6,7 +6,6 @@ import {
   MapPin,
   Clock,
 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
