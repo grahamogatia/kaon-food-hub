@@ -1,6 +1,5 @@
 import crispy_pata from "@/assets/menu/promos/crispy_pata.jpg";
 import pork_belly from "@/assets/menu/promos/pork_belly.jpg";
-import pasta from "@/assets/menu/promos/pasta.jpg";
 import salo1 from "@/assets/menu/promos/salo1.jpg";
 import salo2 from "@/assets/menu/promos/salo2.jpg";
 import salo3 from "@/assets/menu/promos/salo3.jpg";
@@ -10,12 +9,9 @@ import salo6 from "@/assets/menu/promos/salo6.jpg";
 import salo7 from "@/assets/menu/promos/salo7.jpg";
 import salo8 from "@/assets/menu/promos/salo8.jpg";
 import salo9 from "@/assets/menu/promos/salo9.jpg";
-import boodleMega from "@/assets/menu/boodle/boodlebilaomega.jpg";
-import boodleBarkada from "@/assets/menu/boodle/boodlebilaobarkada.jpg";
-import boodleParty from "@/assets/menu/boodle/boodlebilaoparty.jpg";
-import boodleCelebrity from "@/assets/menu/boodle/boodletraycelebrity.jpg";
-import boodle3Footer from "@/assets/menu/boodle/boodletray3footer.jpg";
-import boodle3FooterExtra from "@/assets/menu/boodle/boodletray3footerextra.jpg";
+import boodleFight from "@/assets/menu/boodle/boodle_fight.jpg";
+import boodleTray from "@/assets/menu/boodle/boodle_tray.jpg";
+
 import acPansit from "@/assets/menu/ala-carte/pansit.jpg";
 import acPalabok from "@/assets/menu/ala-carte/palabok.jpg";
 import acCarbonara from "@/assets/menu/ala-carte/carbonara.jpg";
@@ -71,6 +67,7 @@ export const menuItems: MenuItem[] = [
       { label: "Buy 2 Promo", price: 899 },
       { label: "Buy 3 Promo", price: 1350 },
     ],
+    badge: "Promo"
   },
   {
     id: "pork-belly-promo",
@@ -85,6 +82,7 @@ export const menuItems: MenuItem[] = [
       { label: "Buy 2 Promo (with Free Spaghetti)", price: 1699 },
       { label: "Buy 3 Promo (with Free Whole Chicken)", price: 2599 },
     ],
+    badge: "Promo"
   },
   {
     id: "salo-salo1-promo",
@@ -168,64 +166,35 @@ export const menuItems: MenuItem[] = [
     image: salo9,
   },
 
-  
-  
 
   // ── Boodle ────────────────────────────────
   {
-    id: "mega-boodle",
+    id: "boodle-fight",
     type: "boodle",
-    name: "Mega Boodle (Bilao)",
-    items: ["5 Cups of Rice", "10 pcs Jumbo Siomai", "1 Whole Chicken", "1 Fried Bangus", "25 pcs Shanghai"],
+    name: "Boodle Fight",
+    items: ["Mega Boodle (4-5 pax)", "Barkada Boodle (8-10 pax)", "Party Boodle (12-15 pax)"],
     price: 1200,
-    pax: "4–5",
-    image: boodleMega,
+    pax: "from 4-5 pax",
+    image: boodleFight,
+    paxOptions: [
+      { label: "Mega Boodle (4-5 pax)", price: 1200 },
+      { label: "Buy 2 Promo (with Free Spaghetti)", price: 1699 },
+      { label: "Buy 3 Promo (with Free Whole Chicken)", price: 2200 },
+    ],
   },
   {
-    id: "barkada-boodle",
+    id: "boodle-tray",
     type: "boodle",
-    name: "Barkada Boodle (Bilao)",
-    items: ["8 Cups of Rice", "10 pcs Jumbo Siomai", "1 Whole Chicken", "1 Fried Bangus", "30 pcs Shanghai", "10 pcs Pork BBQ", "Crispy Pata"],
-    price: 1699,
-    pax: "8–10",
-    image: boodleBarkada,
-  },
-  {
-    id: "party-boodle",
-    type: "boodle",
-    name: "Party Boodle (Bilao)",
-    items: ["12 Cups of Rice", "15 pcs Jumbo Siomai", "1 Whole Chicken", "1 Fried Bangus", "30 pcs Shanghai", "15 pcs Pork BBQ", "1 Crispy Pata", "1 Small Pansit"],
-    price: 2200,
-    pax: "12–15",
-    image: boodleParty,
-  },
-  {
-    id: "celebrity-boodle-tray",
-    type: "boodle",
-    name: "Celebrity Boodle Tray",
-    items: ["Crispy Pata (Free)", "15 pcs Shanghai", "2 Classic Bangus", "1 Cheesy Bangus", "Whole Fried Chicken", "10 pcs Pork BBQ", "Medium Size Pancit", "8 Cups of Rice"],
+    name: "Boodle Tray",
+    items: ["Celebrity Boodle Tray (10-12 pax)", "3 Footer Boodle Tray (12-15 pax)", "Mega Boodle Tray (15-20 pax)"],
     price: 2400,
-    pax: "10–12",
-    image: boodleCelebrity,
-    badge: "Free Crispy Pata",
-  },
-  {
-    id: "3-footer-boodle-tray",
-    type: "boodle",
-    name: "3 Footer Boodle Tray",
-    items: ["Pork Belly", "Crispy Pata", "Whole Fried Chicken", "15 pcs Pork BBQ", "3 Classic Bangus", "10 Cups of Rice", "Red Egg", "Talong", "Tomato"],
-    price: 3500,
-    pax: "12–15",
-    image: boodle3Footer,
-  },
-  {
-    id: "3-footer-boodle-tray-extra",
-    type: "boodle",
-    name: "3 Footer Boodle Tray Extra",
-    items: ["Pork Belly", "Crispy Pata", "Whole Fried Chicken", "30 pcs Shanghai", "20 pcs Pork BBQ", "5 Classic Bangus", "15 Cups of Rice", "Red Egg", "Talong", "Tomato"],
-    price: 4500,
-    pax: "15–20",
-    image: boodle3FooterExtra,
+    pax: "from 10-12 pax",
+    image: boodleTray,
+    paxOptions: [
+      { label: "Celebrity Boodle Tray (10-12 pax)", price: 2400 },
+      { label: "3 Footer Boodle Tray (12-15 pax)", price: 3500 },
+      { label: "Mega Boodle Tray (15-20 pax)", price: 4500 },
+    ],
   },
 
   // ── Ala Carte ─────────────────────────────

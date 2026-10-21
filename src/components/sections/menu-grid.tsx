@@ -130,7 +130,7 @@ export function MenuGrid() {
               <img
                 src={selectedItem.image}
                 alt={selectedItem.name}
-                className="w-full rounded-md object-cover aspect-[1.91/1]"
+                className="w-full rounded-md object-cover aspect-[1080/835]"
               />
             ) : (
               <div className="flex w-full items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 aspect-[1.91/1]">
