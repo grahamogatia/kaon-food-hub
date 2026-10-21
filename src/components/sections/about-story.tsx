@@ -22,7 +22,7 @@ export function AboutStory() {
             Our Mission
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-            Bringing The Fiesta To Every Table
+            Every Meal, A Fiesta!
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             Affordable, authentic Filipino food made with heart — for every meal, every occasion.

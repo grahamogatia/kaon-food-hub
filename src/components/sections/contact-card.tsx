@@ -38,8 +38,6 @@ export function ContactCard() {
           <Tabs defaultValue="pasig" className="w-full">
             <TabsList className="mb-6 flex w-full justify-center gap-2">
               <TabsTrigger value="pasig">Pasig</TabsTrigger>
-              <TabsTrigger value="rizal">Rizal</TabsTrigger>
-              <TabsTrigger value="caloocan">Caloocan</TabsTrigger>
             </TabsList>
 
             {/* Pasig Tab */}
@@ -93,109 +91,6 @@ export function ContactCard() {
                       icon={<MapPin className="size-4" />}
                       label="Address"
                       value={"Joksonville Townhouse M.H. Del Pilar St., Brgy. Palatiw, Pasig City"}
-                    />
-                    <Separator />
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Rizal Tab */}
-            <TabsContent value="rizal">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Rizal Contact Details</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <ContactRow
-                      icon={<Phone className="size-4" />}
-                      label="Phone"
-                      value="Coming Soon"
-                    />
-                    <ContactRow
-                      icon={<Mail className="size-4" />}
-                      label="Email"
-                      value="Coming Soon"
-                    />
-                    <ContactRow
-                      icon={<Clock className="size-4" />}
-                      label="Operating Hours"
-                      value="Coming Soon"
-                    />
-                    <Separator />
-                    <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-600">
-                      <FacebookIcon className="size-4" />
-                      Coming Soon
-                    </span>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Address</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <ContactRow
-                      icon={<MapPin className="size-4" />}
-                      label="Address"
-                      value="Coming Soon"
-                    />
-                    <Separator />
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Caloocan Tab */}
-            <TabsContent value="caloocan">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Caloocan Contact Details</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <ContactRow
-                      icon={<Phone className="size-4" />}
-                      label="Phone"
-                      value="0927-791-6050"
-                    />
-                    <ContactRow
-                      icon={<Mail className="size-4" />}
-                      label="Email"
-                      value="russellyoczon@gmail.com"
-                    />
-                    <ContactRow
-                      icon={<Clock className="size-4" />}
-                      label="Operating Hours"
-                      value={
-                        <span>
-                          <span className="block">Monday, Wednesday to Sunday: 10:00 AM – 7:00 PM</span>
-                          <span className="block">Tuesday: Closed</span>
-                          <span className="block mt-2 text-xs text-muted-foreground">
-                            🔸 Tuesday are open for advance orders only.<br />
-                            🔸 Last orders are accepted until 6:45 PM daily.
-                          </span>
-                        </span>
-                      }
-                    />
-                    <Separator />
-                    <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-600">
-                      <FacebookIcon className="size-4" />
-                      PISTA CENTRAL NORTH KALOOCAN BRANCH
-                    </span>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Address</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <ContactRow
-                      icon={<MapPin className="size-4" />}
-                      label="Address"
-                      value={
-                        "Lot 17, Blk 3, sampalic st,  Amparo Subd. Gate 3, Bgy 179 North caloocabln"
-                      }
                     />
                     <Separator />
                   </CardContent>
